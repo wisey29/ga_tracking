@@ -24,9 +24,24 @@ function changeBackgroundColor() {
         console.log('Button click event tracked successfully.');
     },
     'event_transport': 'beacon' // Specify the transport method (optional)
-});
+    });
+}
+
+function login() {
+    const username = username-input.value;
+    gtag('set', {'user_id': username});
+}
+
+function logout() {
+    gtag('set', {'user_id': null});
 }
 
 // Add an event listener to the button
 const button = document.getElementById("color-button");
 button.addEventListener("click", changeBackgroundColor);
+
+const login_button = document.getElementById("login-button");
+login_button.addEventListener("click", login);
+
+const logout_button = document.getElementById("logout-button");
+logout_button.addEventListener("click", logout);
