@@ -28,7 +28,7 @@ function changeBackgroundColor() {
 }
 
 function login() {
-    const username = username-input.value;
+    const username = document.getElementById("username-input").value;    
     gtag('set', {'user_id': username});
 }
 
